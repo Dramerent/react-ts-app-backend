@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model guitars {
+  guitar_id   Int     @id @default(autoincrement())
+  guitar_name String
+  strings_id  Int
+  shop_id     Int
+  shop        shop    @relation(fields: [shop_id], references: [shop_id], onDelete: Cascade)
+  strings     strings @relation(fields: [strings_id], references: [string_id], onDelete: Cascade)
+}
+
+model shop {
+  shop_id     Int       @id @default(autoincrement())
+  shop_name   String
+  shop_adress String
+  guitars     guitars[]
+}
+
+model strings {
+  string_name    String
+  string_id      Int       @id(map: "name_of_strings_pkey") @default(autoincrement())
+  string_company String
+  num_of_strings Int?
+  guitars        guitars[]
+}
