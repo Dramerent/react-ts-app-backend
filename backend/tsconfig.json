@@ -1,0 +1,25 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext", //Задаёт систему модулей для программы
+    "moduleResolution": "nodenext", //Эти moduleResolution значения в сочетании с соответствующими module значениями выбирают правильный алгоритм для каждого разрешения в зависимости от того, увидит ли Node.js import или require в выходном коде JavaScript
+    "target": "ES2023",
+    "types": [],
+
+    // Recommended Options
+    "strict": true,
+    "verbatimModuleSyntax": false,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  },
+  "include": [ "src/**/*.ts" ],  
+  "exclude": [ "node_modules" ]  
+}
