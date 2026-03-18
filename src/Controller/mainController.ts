@@ -13,6 +13,7 @@ export async function getAllInfo(req: Request, res: Response): Promise<object> {
                 shop: true
             }
         })
+        res.send(allInfo)
         return res.json(allInfo)    
     } catch (error) {
         return res.status(500).json({error})

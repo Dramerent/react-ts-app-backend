@@ -9,6 +9,7 @@ export async function getAllInfo(req, res) {
                 shop: true
             }
         });
+        res.send(allInfo);
         return res.json(allInfo);
     }
     catch (error) {
