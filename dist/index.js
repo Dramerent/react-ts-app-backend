@@ -12,6 +12,7 @@ app.use(cors(corsSettings));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/app', router);
+app.get('/', (req, res) => { console.log("hw!!"); res.send('Hello, World!'); });
 app.listen(PORT, () => {
     console.log(`сервер запущен на ${PORT} порте`);
 });
