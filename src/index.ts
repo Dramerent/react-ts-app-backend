@@ -15,7 +15,9 @@ console.log('DATABASE_URL:', process.env.DATABASE_URL);
 app.use(cors(corsSettings))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-
+app.get('/', (req: express.Request, res: express.Response) => {res.send
+    ('DATABASE_URL:' + process.env.DATABASE_URL)
+})
 app.use('/app', router)
 
 
