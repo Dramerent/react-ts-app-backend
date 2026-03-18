@@ -11,6 +11,7 @@ const corsSettings: corsSettingsType = {
     origin: 'https://react-ts-app-frontend.onrender.com',
     credentials: true
 }
+console.log('DATABASE_URL:', process.env.DATABASE_URL);
 app.use(cors(corsSettings))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
