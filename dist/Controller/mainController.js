@@ -1,7 +1,6 @@
 import { prisma } from "../lib/prismaClient.js";
 import { validationResult } from "express-validator";
 export async function getAllInfo(req, res) {
-    console.log("connected")
     try {
         console.log(process.env.DATABASE_URL);
         const allInfo = await prisma.guitars.findMany({

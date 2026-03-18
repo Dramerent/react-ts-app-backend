@@ -5,14 +5,13 @@ import { router } from "./Routers/mainRouter.js";
 const app = express();
 const PORT = 3002;
 const corsSettings = {
-    origin: 'http://localhost:5173',
+    origin: 'https://react-ts-app-frontend.onrender.com',
     credentials: true
 };
 app.use(cors(corsSettings));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/app', router);
-app.get('/', (req, res) => { console.log("hw!!"); res.send('Hello, World!'); });
 app.listen(PORT, () => {
     console.log(`сервер запущен на ${PORT} порте`);
 });

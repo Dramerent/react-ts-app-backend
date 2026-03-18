@@ -8,7 +8,7 @@ import { prisma } from "./lib/prismaClient.js"
 const app: express.Express = express()
 const PORT: number = 3002
 const corsSettings: corsSettingsType = {
-    origin: 'http://localhost:5173',
+    origin: 'https://react-ts-app-frontend.onrender.com',
     credentials: true
 }
 app.use(cors(corsSettings))
