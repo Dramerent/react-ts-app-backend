@@ -8,6 +8,6 @@ export default defineConfig({
         path: "prisma/migrations",
     },
     datasource: {
-        url: "postgresql://postgres:1243@localhost:5005/reactTsDB?schema=public",
+        url: "postgresql://postgresql:RjZ6N2WzwK1YirEssTj1QPxoIiPSSEBt@dpg-d6tg02ruibrs73crfi5g-a.oregon-postgres.render.com/ts_app_0l4o?sslmode=require",
     },
 });
