@@ -1,5 +1,3 @@
-
-
 export type corsSettingsType = {
     origin: string,
     credentials: boolean
