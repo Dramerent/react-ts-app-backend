@@ -16,7 +16,7 @@ app.use(cors(corsSettings))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(`dpg-d6tg02ruibrs73crfi5g-a.oregon-postgres.render.com/app`, router);
+app.use(`https://react-ts-app-backend.onrender.com/app`, router);
 
 
 
