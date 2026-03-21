@@ -16,7 +16,7 @@ app.use(cors(corsSettings))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(`https://react-ts-app-backend.onrender.com/app`, router);
+app.use('/app', router)
 
 
 
