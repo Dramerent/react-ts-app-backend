@@ -11,10 +11,7 @@ const corsSettings = {
 app.use(cors(corsSettings));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.get('/', (req, res) => {
-    res.send('DATABASE_URL:' + process.env.DATABASE_URL);
-});
-app.use('/app', router);
+app.use(`dpg-d6tg02ruibrs73crfi5g-a.oregon-postgres.render.com/app`, router);
 app.listen(PORT, () => {
     console.log(`сервер запущен на ${PORT} порте`);
 });
